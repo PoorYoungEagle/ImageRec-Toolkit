@@ -1,0 +1,93 @@
+augmentations:
+
+  oneof_groups:
+    weather:
+      enabled: true
+      p: 0
+      transforms:
+        random_rain:
+          enabled: true
+          blur_value: 2
+        random_fog:
+          enabled: true
+          fog_coef_range: [0.2, 0.5]
+        random_sun_flare:
+          enabled: true
+          flare_roi: [0.1, 0.1, 0.9, 0.9]
+        random_shadow:
+          enabled: true
+          shadow_dimension: 5
+    color_shift:
+      enabled: true
+      p: 0
+      transforms:
+        color_jitter:
+          enabled: true
+          brightness: 0
+          contrast: 0.2
+          saturation: 0.2
+          hue: 0.1
+        hue_saturation_value:
+          enabled: true
+        rgb_shift:
+          enabled: true
+        channel_shuffle:
+          enabled: true
+
+    occlusion:
+      enabled: true
+      p: 0
+      transforms:
+        coarse_dropout:
+          enabled: true
+        grid_dropout:
+          enabled: true
+
+    distortions:
+      enabled: true
+      p: 0
+      transforms:
+        elastic_transform:
+          enabled: true
+        grid_distortion:
+          enabled: true
+        optical_distortion:
+          enabled: true
+
+    blur_noise:
+      enabled: true
+      p: 0
+      transforms:
+        motion_blur:
+          enabled: true
+          blur_limit: 7
+        gauss_noise:
+          enabled: true
+          std_range: [0.1, 0.2]
+        gaussian_blur:
+          enabled: true
+          blur_limit: [3, 5]
+  
+
+  random_resized_crop:
+    enabled: true
+    p: 0.5
+    scale: [0.8, 1.0]
+
+  perspective:
+    enabled: true
+    p: 0.5
+    scale: [0.05, 0.10]
+
+  horizontal_flip:
+    enabled: true
+    p: 0.5
+
+  rotate:
+    enabled: true
+    p: 0.5
+    limit: 30
+
+  random_brightness_contrast:
+    enabled: true
+    p: 0.5

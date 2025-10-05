@@ -1,0 +1,12 @@
+numpy
+pandas
+torch
+torchvision
+PyYAML
+matplotlib
+onnx # Optional
+onnxruntime # Optional
+tqdm
+pillow
+scikit-learn
+albumentations
