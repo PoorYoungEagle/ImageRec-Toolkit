@@ -23,7 +23,6 @@ A PyTorch based CLI toolkit for image classification, augmentation, inference, a
     - [Find Learning Rate](#find-learning-rate)
 - [Testing](#testing)
 - [Sources](#sources)
-- [License](#license)
 
 ## Overview
 ImageRec is a simple Python CLI toolkit for image classification, augmentation, inference, and more. One can quickly test models, experiment with datasets, and handle image data without writing any custom code. It contains these commands:
